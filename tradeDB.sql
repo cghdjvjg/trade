@@ -22,7 +22,7 @@ create table users(
     PRIMARY KEY (categoryID)
 );
 
--- 商品表 
+-- 商品表
 CREATE TABLE goods (
     goodsID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     goodsName VARCHAR(30) NOT NULL,
@@ -33,11 +33,11 @@ CREATE TABLE goods (
     isSold TINYINT NOT NULL DEFAULT 0,
     goodsImages VARCHAR(256),
     createdTime DATETIME NOT NULL,
-    FOREIGN KEY (userID) REFERENCES users(userID), 
+    FOREIGN KEY (userID) REFERENCES users(userID),
     FOREIGN KEY (categoryID) REFERENCES category(categoryID)
 ) DEFAULT CHARSET=utf8mb4;
 
--- 收藏 
+-- 收藏
 CREATE TABLE collection (
     goodsID INT NOT NULL,
     userID INT NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE collection (
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
 
--- 收货地址 
+-- 收货地址
 CREATE TABLE address (
     addrID INT NOT NULL AUTO_INCREMENT,
     userID INT NOT NULL,
@@ -60,9 +60,9 @@ CREATE TABLE address (
     isDefault TINYINT NOT NULL DEFAULT 1,
     PRIMARY KEY (addrID),
     FOREIGN KEY (userID) REFERENCES users(userID)
-); 
+);
 
--- 交易记录 
+-- 交易记录
 CREATE TABLE trade_records (
     tradeID INT NOT NULL AUTO_INCREMENT,
     sellerID INT NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE trade_records (
     FOREIGN KEY (goodsID) REFERENCES goods(goodsID)
 );
 
--- 退货记录 
+-- 退货记录
 CREATE TABLE refund_records (
     refundID INT NOT NULL AUTO_INCREMENT,
     tradeID INT NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE refund_records (
     trackingNumber VARCHAR(100),
     PRIMARY KEY (refundID),
     FOREIGN KEY (tradeID) REFERENCES trade_records(tradeID)
-); 
+);
 
 -- 管理员
 CREATE TABLE admin (
@@ -108,7 +108,7 @@ CREATE TABLE admin (
     PRIMARY KEY (adminID)
 );
 
--- 举报 
+-- 举报
 CREATE TABLE report (
     reportID INT NOT NULL AUTO_INCREMENT,
     userID INT NOT NULL,
@@ -120,7 +120,7 @@ CREATE TABLE report (
     FOREIGN KEY (goodsID) REFERENCES goods(goodsID)
 )DEFAULT CHARSET=utf8mb4;
 
--- 聊天记录 
+-- 聊天记录
 CREATE TABLE chat_records (
     chatID INT NOT NULL AUTO_INCREMENT,
     senderID INT NOT NULL,
@@ -130,9 +130,9 @@ CREATE TABLE chat_records (
     PRIMARY KEY (chatID),
     FOREIGN KEY (senderID) REFERENCES users(userID),
     FOREIGN KEY (receiverID) REFERENCES users(userID)
-)DEFAULT CHARSET=utf8mb4; 
+)DEFAULT CHARSET=utf8mb4;
 
--- 退货申诉 
+-- 退货申诉
 CREATE TABLE refund_complaint (
     complaintID INT NOT NULL AUTO_INCREMENT,
     tradeID INT NOT NULL,
@@ -143,7 +143,7 @@ CREATE TABLE refund_complaint (
     FOREIGN KEY (tradeID) REFERENCES trade_records(tradeID)
 )DEFAULT CHARSET=utf8mb4;
 
--- 学校 
+-- 学校
 CREATE TABLE school (
     schoolID INT NOT NULL AUTO_INCREMENT,
     schoolName VARCHAR(80) NOT NULL,

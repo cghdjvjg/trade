@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	conf "github.com/kasiforce/trade/config"
-	"github.com/kasiforce/trade/pkg/util"
-	"github.com/kasiforce/trade/repository/db/dao"
-	"github.com/kasiforce/trade/routes"
+	conf "github.com/cghdjvjg/trade/config"
+	"github.com/cghdjvjg/trade/pkg/util"
+	"github.com/cghdjvjg/trade/repository/db/dao"
+	"github.com/cghdjvjg/trade/routes"
 )
 
 func main() {

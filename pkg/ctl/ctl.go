@@ -1,8 +1,8 @@
 package ctl
 
 import (
+	"github.com/cghdjvjg/trade/pkg/e"
 	"github.com/gin-gonic/gin"
-	"github.com/kasiforce/trade/pkg/e"
 )
 
 type Response struct {

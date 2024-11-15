@@ -2,7 +2,7 @@ package dao
 
 import (
 	"context"
-	"github.com/kasiforce/trade/repository/db/model"
+	"github.com/cghdjvjg/trade/repository/db/model"
 	"gorm.io/gorm"
 )
 

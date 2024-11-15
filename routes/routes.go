@@ -1,11 +1,11 @@
 package routes
 
 import (
+	"github.com/cghdjvjg/trade/api"
+	"github.com/cghdjvjg/trade/middleware"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
-	"github.com/kasiforce/trade/api"
-	"github.com/kasiforce/trade/middleware"
 	"net/http"
 )
 

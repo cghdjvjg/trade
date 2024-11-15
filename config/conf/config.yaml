@@ -9,11 +9,11 @@ system:
 mysql:
   default:
     dialect: "mysql"
-    dbHost: "127.0.0.1"
+    dbHost: "localhost"
     dbPort: "3306"
     dbName: "trade_db"
     userName: "root"
-    password: "123456"
+    password: "=4Xgranddaddy"
     charset: "utf8mb4"
 
 #redis:

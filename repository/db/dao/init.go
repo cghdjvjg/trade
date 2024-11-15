@@ -2,8 +2,8 @@ package dao
 
 import (
 	"context"
+	conf "github.com/cghdjvjg/trade/config"
 	"github.com/gin-gonic/gin"
-	conf "github.com/kasiforce/trade/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
